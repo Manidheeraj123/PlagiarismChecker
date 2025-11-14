@@ -1,0 +1,19 @@
+# Virtual Environment
+venv/
+.env
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Upload folder (runtime files)
+uploads/*
+!uploads/.gitkeep
+
+# IDE files
+.vscode/
+.idea/
+
+# OS
+Thumbs.db
+.DS_Store
