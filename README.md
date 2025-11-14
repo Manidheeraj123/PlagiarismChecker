@@ -1,0 +1,1 @@
+PlagiarismChecker is an NLP-based web app that detects similarity between student assignments using TF-IDF, cosine similarity, and Sentence-BERT. Built with Python and Flask, it provides real-time plagiarism reports with accurate similarity scoring and clean visual insights.
