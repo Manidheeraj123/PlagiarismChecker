@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Plagiarism Result</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        h1 { color: #333; }
+        .score { margin: 10px 0; padding: 10px; background: #f4f4f4; border-radius: 6px; }
+        .bar-container { width: 100%; background: #ddd; border-radius: 6px; margin: 10px 0; }
+        .bar { height: 20px; border-radius: 6px; }
+        .tfidf { background: #007BFF; }
+        .sbert { background: #28A745; }
+        .final { background: #FF5722; }
+        a { text-decoration: none; color: #007BFF; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <h1>Plagiarism Detection Result</h1>
+
+    <div class="score"><strong>TF-IDF Similarity:</strong> {{ tfidf_score }}%</div>
+    <div class="bar-container">
+        <div class="bar tfidf" style="width: {{ tfidf_score }}%"></div>
+    </div>
+
+    <div class="score"><strong>SBERT Similarity:</strong> {{ sbert_score }}%</div>
+    <div class="bar-container">
+        <div class="bar sbert" style="width: {{ sbert_score }}%"></div>
+    </div>
+
+    <div class="score"><strong>Final Plagiarism Score:</strong> {{ final_score }}%</div>
+    <div class="bar-container">
+        <div class="bar final" style="width: {{ final_score }}%"></div>
+    </div>
+
+    <br>
+    <a href="/">⬅ Go Back</a>
+</body>
+</html>

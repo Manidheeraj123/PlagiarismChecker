@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Plagiarism Detection</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        h2 { color: #333; }
+        form { background: #f9f9f9; padding: 20px; border-radius: 8px; width: 400px; }
+        label { display: block; margin: 10px 0 5px; font-weight: bold; }
+        input[type="file"] { margin-bottom: 15px; }
+        button {
+            background: #007BFF;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover { background: #0056b3; }
+    </style>
+</head>
+<body>
+    <h2>Upload Two Text Files for Plagiarism Check</h2>
+    <form action="/compare" method="POST" enctype="multipart/form-data">
+        <label for="file1">File 1:</label>
+        <input type="file" id="file1" name="file1" accept=".txt" required>
+
+        <label for="file2">File 2:</label>
+        <input type="file" id="file2" name="file2" accept=".txt" required>
+
+        <button type="submit">Check Plagiarism</button>
+    </form>
+</body>
+</html>
